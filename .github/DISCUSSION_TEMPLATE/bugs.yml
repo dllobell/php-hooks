@@ -1,0 +1,48 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before submitting a bug report, please take a moment to review the following:**
+
+        * Search for existing discussions and ensure your issue hasn't already been reported.
+        * Ensure you are on the latest version of the package by running `composer update dllobell/hooks`.
+
+        To address this bug as fast as possible, we need the following information:
+
+  - type: dropdown
+    id: php-version
+    attributes:
+      label: PHP version
+      options:
+        - 8.4
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Describe the issue
+      description: Provide a clear and concise description of what the issue is.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Reproduction code snippet
+      description: Include a code snippet we can copy and paste to reproduce. Try using the minimum code required for reproduction.
+      render: php
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: How do you expect it to work?
+      description: Describe how do you expect it to work.
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Please confirm the following
+      options:
+        - label: I understand my bug report will be removed if I haven't met the criteria above.
+          required: true
